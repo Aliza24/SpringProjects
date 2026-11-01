@@ -1,0 +1,15 @@
+package com.jecrc.step1;
+
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
+public class App {
+    public static void main(String[] args) {
+        ApplicationContext context = new ClassPathXmlApplicationContext("spring.xml");
+
+        Alien obj = (Alien) context.getBean("alien");
+        obj.code();
+        Calculator obj2 = (Calculator) context.getBean("calc");
+        obj2.Calc();
+    }
+}
